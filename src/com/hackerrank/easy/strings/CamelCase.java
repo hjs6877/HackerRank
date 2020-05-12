@@ -1,4 +1,4 @@
-package com.hackerrank.easy;
+package com.hackerrank.easy.strings;
 
 public class CamelCase {
     public static void main(String[] args) {

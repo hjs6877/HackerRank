@@ -1,4 +1,4 @@
-package com.hackerrank.easy;
+package com.hackerrank.easy.strings;
 
 import java.nio.charset.CharacterCodingException;
 import java.util.Arrays;
