@@ -14,16 +14,17 @@ public class CaesarCipher {
         String encryptedStr = "";
         int rotate = k % 26;
         for (char c : s.toCharArray()) {
-            if(Character.isAlphabetic(c)){
+            if(!Character.isLetter(c))
+                encryptedStr += (char) c;
+            else {
                 if (Character.toUpperCase('z') - Character.toUpperCase(c) >= rotate) {
                     encryptedStr += (char) (c + rotate);
-                } else if(c == Character.toUpperCase(c)){
-                    encryptedStr += (char) (('A' - 1) + (rotate - (Character.toUpperCase('z') - c)));
-                } else  {
-                    encryptedStr += (char) (('a' - 1) + (rotate - ('z' - c)));
+                } else {
+                    char base = Character.isLowerCase(c) ? 'a' : 'A';
+                    char endBase = Character.isLowerCase(c) ? 'z' : 'Z';
+
+                    encryptedStr += (char) ((base - 1) + (rotate - (endBase - c)));
                 }
-            }else{
-                encryptedStr += (char) c;
             }
 
         }
