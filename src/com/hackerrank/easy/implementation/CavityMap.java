@@ -24,7 +24,7 @@ public class CavityMap {
             String tr = grid[p + 2];
             char X = 'X';
             for (int i = 0; i < sr.length(); i++) {
-                if (i != 0 && i != sr.length() - 1 && fr.charAt(i) != X) {
+                if (i != 0 && i != sr.length() - 1) {
                     if (
                             (fr.charAt(i) != X && sr.charAt(i) > fr.charAt(i))
                                     && (tr.charAt(i) != X && sr.charAt(i) > tr.charAt(i))
